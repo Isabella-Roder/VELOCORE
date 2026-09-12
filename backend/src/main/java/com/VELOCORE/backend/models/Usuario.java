@@ -1,6 +1,7 @@
 package com.VELOCORE.backend.models;
 
 import com.VELOCORE.backend.enums.TipoUsuario;
+import com.VELOCORE.backend.exception.RegraDeNegocioException;
 import jakarta.persistence.*;
 
 import java.time.Instant;
@@ -67,7 +68,7 @@ public class Usuario {
 
     public void desativar() {
         if (!ativo) {
-            throw new IllegalArgumentException("Usuário precisa estar ativo para desativar.");
+            throw new RegraDeNegocioException("Usuário precisa estar ativo para desativar.");
         }
 
         ativo = false;
@@ -75,7 +76,7 @@ public class Usuario {
 
     public void ativar() {
         if (ativo) {
-            throw new IllegalArgumentException("Usuário precisa estar desativado para ativar.");
+            throw new RegraDeNegocioException("Usuário precisa estar desativado para ativar.");
         }
 
         ativo = true;
