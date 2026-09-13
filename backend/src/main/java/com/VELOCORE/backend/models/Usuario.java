@@ -129,4 +129,8 @@ public class Usuario {
     public void setTipo(TipoUsuario tipo) {
         this.tipo = tipo;
     }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
 }
