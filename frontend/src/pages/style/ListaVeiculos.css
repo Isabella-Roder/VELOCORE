@@ -1,0 +1,73 @@
+.lista-veiculos {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(155deg, #161616 0%, #0d0d0d 100%);
+    border: 1px solid #2a2a2a;
+    color: #eaeaea;
+    font-family: "Rajdhani", system-ui, sans-serif;
+}
+
+.lista-veiculos h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #fff;
+}
+
+.lista-veiculos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lista-veiculos th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9a9a9a;
+    border-bottom: 1px solid #333;
+}
+
+.lista-veiculos td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 1px solid #222;
+    font-size: 0.95rem;
+}
+
+.lista-veiculos .status {
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lista-veiculos .status-em_producao {
+    background: rgba(234, 179, 8, 0.15);
+    color: #facc15;
+}
+
+.lista-veiculos .status-disponivel {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+.lista-veiculos .status-vendido {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60a5fa;
+}
+.lista-veiculos .status-manutencao {
+    background: rgba(220, 38, 38, 0.15);
+    color: #f87171;
+}
+.lista-veiculos .mensagem {
+    color: #9a9a9a;
+}
+.lista-veiculos .mensagem.erro {
+    color: #f87171;
+}

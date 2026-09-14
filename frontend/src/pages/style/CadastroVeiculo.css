@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap");
+
+.cadastro-veiculo {
+    max-width: 440px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    border-radius: 10px;
+    background: linear-gradient(155deg, #161616 0%, #0d0d0d 100%);
+    border: 1px solid #2a2a2a;
+    color: #eaeaea;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(220, 38, 38, 0.08);
+    font-family: "Rajdhani", system-ui, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.cadastro-veiculo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #dc2626, #7f1d1d);
+}
+
+.cadastro-veiculo h1 {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #fff;
+}
+
+.cadastro-veiculo h1::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: #dc2626;
+    margin: 0.6rem auto 0;
+}
+
+.cadastro-veiculo .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.cadastro-veiculo label {
+    margin-bottom: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9a9a9a;
+}
+
+.cadastro-veiculo input, .cadastro-veiculo select {
+    padding: 0.65rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.cadastro-veiculo input:focus, .cadastro-veiculo select:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.cadastro-veiculo select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #dc2626 50%),
+        linear-gradient(135deg, #dc2626 50%, transparent 50%);
+    background-position: calc(100% - 18px) center calc(100% - 13px) center;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.cadastro-veiculo .erro-campo {
+    color: #f87171;
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+}
+
+.cadastro-veiculo button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.6rem;
+    border: none;
+    border-radius: 4px;
+    background: #dc2626;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.cadastro-veiculo button:hover:not(:disabled) {
+    background: #691c1c;
+}
+
+.cadastro-veiculo button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.cadastro-veiculo button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cadastro-veiculo .mensagem {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #d4d4d4;
+}
