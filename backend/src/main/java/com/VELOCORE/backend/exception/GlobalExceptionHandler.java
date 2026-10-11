@@ -2,6 +2,8 @@ package com.VELOCORE.backend.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.springframework.security.core.AuthenticationException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -43,5 +47,11 @@ public class GlobalExceptionHandler {
         corpo.put("erro", status.getReasonPhrase());
         corpo.put("mensagem", mensagem);
         return corpo;
+    }
+
+    @ExceptionHandler({BadCredentialsException.class, DisabledException.class})
+    public ResponseEntity<Map<String, Object>> handleLoginInvalido(AuthenticationException ex) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+            .body(corpo(HttpStatus.UNAUTHORIZED, "E-mail ou senha inválido."));
     }
 }
